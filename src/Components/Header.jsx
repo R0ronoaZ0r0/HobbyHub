@@ -1,7 +1,23 @@
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
-        <div>
-            <h1>Header</h1>
+        <div className="header">
+            <Button component={Link} className="title" to="/" > 
+                HistoryHub
+            </Button>
+            <div className="search-bar">
+                Search
+            </div>
+            <div className="links">
+                <Button component={Link} to="/" > 
+                    Home
+                </Button>
+                <Button component={Link} to="/createPost" > 
+                    Create New Post
+                </Button>
+            </div>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useState } from "react";
-import { Button, TextField } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 
 const Form = (props) => {
     const [title, setTitle] = useState('');
@@ -14,39 +14,51 @@ const Form = (props) => {
     }
 
     return(
+        <Box 
+            marginTop={10} 
+            padding={3}
+            border={1}
+            borderRadius={3} 
+        >
+            <form className="form" onSubmit={handleSubmit}>
+                <TextField
+                    margin="normal"
+                    className="width-400"
+                    required 
+                    size="small" 
+                    type="text" 
+                    value={title}  
+                    onChange={(e)=>setTitle(e.target.value)} 
+                    label="Title"
+                    helperText="Please enter a title."
+                />
+                <TextField 
+                    margin="normal"
+                    className="width-400"
+                    multiline 
+                    type="text" 
+                    value={content}
+                    rows={5}
+                    onChange={(e)=>setContent(e.target.value)} 
+                    label="Content(optional)"
+                    characterLimit={500}
+                    helperText="Please enter content."
+                />
+                <TextField 
+                    margin="normal"
+                    className="width-400"
+                    size="small" 
+                    type="url" 
+                    value={imageURL}
+                    onChange={(e)=>setImageURL(e.target.value)} 
+                    label="Image URL(optional)"
+                    helperText="Please enter an image URL."
+                />
+                <Button variant="contained" type="submit"> Create Post </Button>   
+            </form>
+        </Box>
         
-        <form className="form" onSubmit={handleSubmit}>
-            <TextField 
-                className="width-60" 
-                required size="small" 
-                type="text" 
-                value={title}  
-                onChange={(e)=>setTitle(e.target.value)} 
-                label="Title"
-                helperText="Please enter a title."
-            />
-            <TextField 
-                className="width-60" 
-                multiline 
-                type="text" 
-                value={content}
-                rows={5}
-                onChange={(e)=>setContent(e.target.value)} 
-                label="Content"
-                characterLimit={500}
-                helperText="Please enter content."
-            />
-            <TextField 
-                className="width-60" 
-                size="small" 
-                type="url" 
-                value={imageURL}
-                onChange={(e)=>setImageURL(e.target.value)} 
-                label="Image URL"
-                helperText="Please enter an image URL."
-            />
-            <Button variant="contained" type="submit"> Create Post </Button>   
-        </form>
+        
         
     );
 }

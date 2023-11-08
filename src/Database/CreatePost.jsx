@@ -10,7 +10,10 @@ const CreatePost = () => {
     }
     
     return (
-        <Form onSubmit={handleSubmit} />
+        <div className="form-container">
+            <Form  onSubmit={handleSubmit} />
+        </div>
+        
     )
 }
 
