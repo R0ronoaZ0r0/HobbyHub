@@ -1,5 +1,6 @@
 import supabase from "../client";
 import { useState } from "react";
+import { Button, TextField } from "@mui/material";
 
 const CreatePost = () => {
     const [title, setTitle] = useState('');
@@ -12,12 +13,12 @@ const CreatePost = () => {
     }
 
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" value={title} placeholder="Enter Title" onChange={(e)=>setTitle(e.target.value)} />
-                <input type="text" value={content} placeholder="Enter content(optional)" onChange={(e)=>setContent(e.target.value)} />
-                <input type="text" value={imageURL} placeholder="Enter image URL(optional)" onChange={(e)=>setImageURL(e.target.value)} />
-                <input type="submit"/>   
+        <div >
+            <form className="form" onSubmit={handleSubmit}>
+                <TextField className="title" required size="small" type="text" value={title} placeholder="Enter Title" onChange={(e)=>setTitle(e.target.value)} />
+                <TextField className="content" multiline type="text" value={content} placeholder="Enter content(optional)" onChange={(e)=>setContent(e.target.value)} />
+                <TextField className="url" size="small" type="url" value={imageURL} placeholder="Enter image URL(optional)" onChange={(e)=>setImageURL(e.target.value)} />
+                <Button variant="contained" type="submit"> Create Post </Button>   
             </form>
         </div>
     );
