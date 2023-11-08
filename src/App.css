@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 } */
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh; 
+  width: 70vh;
+  justify-content: space-around;
+  border: 2px solid #888;
+}
+
+.width-60{
+  width: 60vh;
+}
+
+
