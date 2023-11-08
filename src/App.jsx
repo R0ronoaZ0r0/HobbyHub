@@ -1,12 +1,14 @@
 import './App.css'
-import CreatePost from './Database/CreatePost'
+import Home from './Components/Home'
+import Header from './Components/Header'
 
 
 function App() {
 
   return (
     <div>
-      <CreatePost />
+      <Header />
+      <Home />
     </div>
   )
 }

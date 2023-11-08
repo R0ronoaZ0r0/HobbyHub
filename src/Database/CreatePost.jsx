@@ -5,7 +5,7 @@ const CreatePost = () => {
 
     const handleSubmit = async (data) => {
         await supabase
-            .from('hobbyhub')
+            .from('posts')
             .insert(data);
     }
     
