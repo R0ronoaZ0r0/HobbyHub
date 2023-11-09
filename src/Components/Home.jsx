@@ -1,7 +1,13 @@
+import Post from "./Post";
+
 const Home = () => {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="post-container">
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
         </div>
     )
 }
