@@ -10,7 +10,8 @@ const DisplayPosts = () => {
             const getPosts = async () => {
                 const { data, error } = await supabase
                     .from('posts')
-                    .select('id,title,upvotes,created_at');
+                    .select('id,title,upvotes,created_at')
+                    .order('created_at', { ascending: true });
                 console.log('error: ' + error);
                 setPosts(data);
             }

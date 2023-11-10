@@ -41,6 +41,8 @@ const ViewPostDetails = () => {
         navigate("/");
     }
 
+    
+
     return(
         <Box
             border={1}

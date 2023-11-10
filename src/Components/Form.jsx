@@ -41,7 +41,7 @@ const Form = (props) => {
                     rows={5}
                     onChange={(e)=>setContent(e.target.value)} 
                     label="Content(optional)"
-                    characterLimit={500}
+                    characterlimit={500}
                     helperText="Please enter content."
                 />
                 <TextField 
