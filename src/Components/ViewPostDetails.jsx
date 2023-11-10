@@ -52,16 +52,15 @@ const ViewPostDetails = () => {
             <HoursAgo created_at={post.created_at}/>
             <Typography variant="h6">{post.title}</Typography>
             <Typography variant="body1">{post.content}</Typography>
-            <Box>
-                {post.imageURL && <img src={post.imageURL} alt="No image"  />}
+            <Box textAlign={"center"}>
+                {post.imageURL && <img src={post.imageURL} alt="No image" style={{maxWidth:"100%", height:"auto"}} />}
             </Box>
-            <Typography variant="body2">
-                
-                <Box>
+            <Box sx={{display:"flex", justifyContent:"space-between"}}>
+                <Box sx={{display:"flex", alignItems:"center"}}>
                     <IconButton onClick={handleUpvoteClick}>
                         <ThumbUpRounded color="secondary"/>
                     </IconButton>
-                    {post.upvotes} upvotes
+                    <Typography variant="body2"> {post.upvotes} upvotes </Typography>
                 </Box>
                 <Box>
                     <IconButton >
@@ -69,11 +68,9 @@ const ViewPostDetails = () => {
                     </IconButton>
                     <IconButton onClick={handleDeleteClick}>
                         <DeleteForeverRounded color="error"/>
-                    </IconButton>
-                    
+                    </IconButton>                    
                 </Box>
-
-            </Typography>
+            </Box>
             
             comments
         </Box>
