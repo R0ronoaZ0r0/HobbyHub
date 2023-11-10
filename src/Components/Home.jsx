@@ -1,13 +1,9 @@
-import Post from "./Post";
+import DisplayPosts from "./DisplayPosts";
 
 const Home = () => {
     return (
         <div className="post-container">
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
+            <DisplayPosts/>
         </div>
     )
 }

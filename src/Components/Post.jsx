@@ -1,6 +1,11 @@
-import { Box, Typography } from "@mui/material";
+/* eslint-disable react/prop-types */
+import { Box, Typography, Link } from "@mui/material";
+import { Link as RouteLink }  from "react-router-dom";
+import HoursAgo from "./HoursAgo";
 
-const Post = () => {
+const Post = ({id, title, upvotes, created_at}) => {
+    
+
     return(
         <Box
             border={1}
@@ -10,11 +15,14 @@ const Post = () => {
             mx={20}   
             my={5}
             display={"grid"}
-            gap={1}              
+            gap={1}             
         >
-            <Typography variant="body1">Posted time</Typography>
-            <Typography variant="h6">Title</Typography>
-            <Typography variant="caption" fontSize={13} >upvote</Typography>
+            <HoursAgo created_at={created_at}/>
+            <Link to={`/viewPost/${id}`} component={RouteLink}>
+                <Typography variant="h6">{title}</Typography>
+            </Link>
+            
+            <Typography variant="caption" fontSize={13} >upvotes: {upvotes}</Typography>
         </Box>
     );
 }
