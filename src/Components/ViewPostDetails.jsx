@@ -1,6 +1,6 @@
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton} from "@mui/material";
 import { ThumbUpRounded, DeleteForeverRounded, EditRounded } from "@mui/icons-material";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link as RouterLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import HoursAgo from "./HoursAgo";
 import supabase from "../client";
@@ -43,6 +43,8 @@ const ViewPostDetails = () => {
 
     
 
+    
+
     return(
         <Box
             border={1}
@@ -65,7 +67,7 @@ const ViewPostDetails = () => {
                     <Typography variant="body2"> {post.upvotes} upvotes </Typography>
                 </Box>
                 <Box>
-                    <IconButton >
+                    <IconButton component={RouterLink} to={`/editPost/${id}`}>
                         <EditRounded color="secondary"/>
                     </IconButton>
                     <IconButton onClick={handleDeleteClick}>

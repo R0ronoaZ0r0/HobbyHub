@@ -2,11 +2,20 @@
 
 import { useState } from "react";
 import { Box, Button, TextField } from "@mui/material";
+import { useEffect } from "react";
 
 const Form = (props) => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [imageURL, setImageURL] = useState('');
+
+    useEffect(() => {
+        if(props.post){
+            setTitle(props.post.title);
+            setContent(props.post.content);
+            setImageURL(props.post.imageURL);
+        }
+    }, [props.post]);
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -54,7 +63,7 @@ const Form = (props) => {
                     label="Image URL(optional)"
                     helperText="Please enter an image URL."
                 />
-                <Button variant="contained" type="submit"> Create Post </Button>   
+                <Button variant="contained" type="submit"> {props.type} </Button>   
             </form>
         </Box>
         

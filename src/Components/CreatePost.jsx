@@ -12,9 +12,11 @@ const CreatePost = () => {
         navigate("/");
     }
     
+    const postDefault = {title:'', content:'', imageURL:''};
+
     return (
         <div className="form-container">
-            <Form  onSubmit={handleSubmit} />
+            <Form type='Create Post' onSubmit={handleSubmit} post={postDefault} />
         </div>
         
     )
