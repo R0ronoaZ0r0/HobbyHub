@@ -8,8 +8,17 @@ const HoursAgo = (props) => {
     const hoursAgo = Math.floor((currentTime - createdAt) / 36e5);
     
     return (
+        <>
+            {
+                hoursAgo < 24 ?
+                    <Typography variant="body1">Posted {hoursAgo} hours ago</Typography>
+                    :
+                    <Typography variant="body1">Posted {Math.floor(hoursAgo / 24)} days ago</Typography>
+                
+            }
+            
+        </>
         
-        <Typography variant="body1">Posted {hoursAgo} hours ago</Typography>
         
     );
 }
