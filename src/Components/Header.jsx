@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
     return (
@@ -7,10 +8,8 @@ const Header = () => {
             <Button component={Link} className="title" to="/" > 
                 HistoryHub
             </Button>
-            <div className="search-bar">
-                Search
-            </div>
-            <div className="links">
+            <SearchBar/>
+            <div className="links" style={{display:"flex"}} >
                 <Button component={Link} to="/" > 
                     Home
                 </Button>

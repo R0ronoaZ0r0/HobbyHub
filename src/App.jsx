@@ -4,6 +4,7 @@ import Header from './Components/Header'
 import CreatePost from './Components/CreatePost'
 import ViewPostDetails from './Components/ViewPostDetails'
 import EditPost from './Components/EditPost'
+import SearchResults from './Components/SearchResults'
 import { Routes, Route } from 'react-router-dom'
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/createPost' element={<CreatePost/>} />
         <Route path='/viewPost/:id' element={<ViewPostDetails/>} />
         <Route path='/editPost/:id' element={<EditPost/>} />
+        <Route path='/searchResults' element={<SearchResults/>} />
       </Routes>
     </div>
   )
