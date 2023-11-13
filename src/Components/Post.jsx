@@ -13,7 +13,7 @@ const Post = ({id, title, upvotes, created_at}) => {
             px={5}
             py={2} 
             mx={20}   
-            my={5}
+            my={4}
             display={"grid"}
             gap={1}             
         >
