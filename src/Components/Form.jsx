@@ -25,6 +25,7 @@ const Form = (props) => {
     return(
         <Box 
             marginTop={10} 
+            mx={"auto"}
             padding={3}
             border={1}
             borderRadius={3} 

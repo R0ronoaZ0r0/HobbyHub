@@ -1,8 +1,10 @@
 import DisplayPosts from "./DisplayPosts";
+import Filter from "./Filter";
 
 const Home = () => {
     return (
-        <div className="post-container">
+        <div >
+            <Filter/>
             <DisplayPosts/>
         </div>
     )

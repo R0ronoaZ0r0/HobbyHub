@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+
 import supabase from "../client";
 import Form from "./Form";
 
@@ -26,9 +27,11 @@ const EditPost = () => {
     }
 
     return (
-        <div>
+        <div className="form-container">
             <Form post={post} type='Update Post' onSubmit={handleSubmit}/>
         </div>
+        
+        
     )
 }
 
