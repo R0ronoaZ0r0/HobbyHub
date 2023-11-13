@@ -19,7 +19,7 @@ function App() {
         <Route path='/createPost' element={<CreatePost/>} />
         <Route path='/viewPost/:id' element={<ViewPostDetails/>} />
         <Route path='/editPost/:id' element={<EditPost/>} />
-        <Route path='/searchResults' element={<SearchResults/>} />
+        <Route path='/searchResults/:searchTerm' element={<SearchResults/>} />
       </Routes>
     </div>
   )

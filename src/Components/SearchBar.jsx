@@ -1,23 +1,26 @@
 import { Box, FormControl, InputAdornment, TextField, IconButton } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import { useState } from "react";
-import supabase from "../client";     
+import { useNavigate } from "react-router-dom";
+// import supabase from "../client";     
 
 
 const SearchBar = () => {
-
+    
+    const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState("");
-    const [searchData, setSearchData] = useState("");
+    // const [searchData, setSearchData] = useState("");
 
     const handleSearchSubmit = async (e) => {
         e.preventDefault();
-        const {data, error} = await supabase
-                .from("posts")
-                .select()
-                .textSearch("title", searchTerm);
-        setSearchData(data);
-        console.log("error: " + error);
-        setSearchData(data); 
+        // const {data, error} = await supabase
+        //         .from("posts")
+        //         .select()
+        //         .textSearch("title", searchTerm);
+        // setSearchData(data);
+        // console.log("error: " + error);
+        // setSearchData(data); 
+        navigate(`/searchResults/${searchTerm}`);
     }
 
     return (
