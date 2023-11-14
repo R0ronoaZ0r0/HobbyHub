@@ -4,6 +4,7 @@ import { useParams, useNavigate, Link as RouterLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import HoursAgo from "./HoursAgo";
 import supabase from "../client";
+import Comments from "./Comments";
 
 
 
@@ -76,7 +77,8 @@ const ViewPostDetails = () => {
                 </Box>
             </Box>
             
-            comments
+            <Comments id={id}/>
+            
         </Box>
     );
 }

@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className="header">
             <Button component={Link} className="title" to="/" > 
-                HistoryHub
+                One Piece Hub
             </Button>
             <SearchBar/>
             <div className="links" style={{display:"flex"}} >
