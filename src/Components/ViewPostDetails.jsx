@@ -3,7 +3,6 @@ import { ThumbUpRounded, DeleteForeverRounded, EditRounded } from "@mui/icons-ma
 import { useParams, useNavigate, Link as RouterLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import HoursAgo from "./HoursAgo";
-import supabase from "../client";
 import Comments from "./Comments";
 
 

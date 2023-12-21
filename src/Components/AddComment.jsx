@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
 import { Box, TextField, FormControl } from "@mui/material";
-import supabase from "../client";
+
 import { useState } from "react";
 
 const AddComment = (props) => {

@@ -1,5 +1,5 @@
 import Form from "./Form";
-import supabase from "../client"
+
 import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Typography } from "@mui/material";
 
 const HoursAgo = (props) => {

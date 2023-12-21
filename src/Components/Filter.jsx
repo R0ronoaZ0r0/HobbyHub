@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { Box } from "@mui/material";
 import {Button} from "@mui/material";
 

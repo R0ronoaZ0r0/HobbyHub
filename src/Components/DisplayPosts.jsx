@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-import supabase from "../client";
+
 import { useEffect, useState } from "react";
 import Post from "./Post";
 

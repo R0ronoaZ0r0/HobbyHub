@@ -2,7 +2,7 @@ import { Box, FormControl, InputAdornment, TextField, IconButton } from "@mui/ma
 import { Search } from "@mui/icons-material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import supabase from "../client";     
+     
 
 
 const SearchBar = () => {

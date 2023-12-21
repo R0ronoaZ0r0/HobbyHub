@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
+
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import supabase from "../client";
+
 import AddComment from "./AddComment";
 
 

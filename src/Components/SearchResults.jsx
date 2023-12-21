@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Post from "./Post";
-import supabase from "../client";
+
 
 const SearchResults = () => {
 

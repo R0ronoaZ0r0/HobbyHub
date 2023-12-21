@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Box, Typography, Link } from "@mui/material";
 import { Link as RouteLink }  from "react-router-dom";
 import HoursAgo from "./HoursAgo";
